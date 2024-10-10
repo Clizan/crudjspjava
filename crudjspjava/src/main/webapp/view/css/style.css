@@ -1,11 +1,12 @@
-.informacao_pagina{
-	background: rgba(122,121,128,1);
+/*Início do CSS para a tela de viewusuarios*/
+.informacao_pagina {
+	background: rgba(122, 121, 128, 1);
 	border: 1px;
 	height: 50px;
 	width: 100%;
 }
 
-.titulo_pagina{
+.titulo_pagina {
 	color: #bdbcc0;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
@@ -13,6 +14,78 @@
 	text-align: center;
 }
 
-.table{
+.btn_add {
+	align-items: center;
+	background: #94c0ed !important;
+	display: flex;
+	justify-content: center;
+	max-height: 2rem;
+	margin-top: 40px;
+}
+
+#icones {
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+a {
+	align-items: center;
+	color: black !important;
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	height: 100%;
+	justify-content: center;
+	margin-top: 2px;
+	text-decoration: none !important;
+	width: 100%;
+	text-decoration: none !important;
+}
+
+.table {
 	margin-top: 20px;
 }
+
+.thead_usuarios {
+	background: #212529 !important;
+}
+
+.btn_view {
+	align-items: center;
+	background: #94c0ed !important;
+	border-radius: 0px !important;
+	float: left;
+	height: 35px;
+	width: 40px;
+	border-bottom-left-radius: 0px !important;
+}
+
+.btn_edit {
+	align-items: center;
+	background: #ffd175 !important;
+	border-radius: 0px !important;
+	float: left;
+	height: 35px;
+	width: 40px;
+	border-bottom-left-radius: 0px;
+}
+
+.btn_delete {
+	align-items: center;
+	background: #f38587 !important;
+	border-radius: 0px !important;
+	float: left;
+	height: 35px;
+	width: 40px;
+	border-bottom-left-radius: 0px !important;
+}
+
+#icones_acao {
+	height: 16px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+/*Fim do CSS para a tela de viewusuarios*/
