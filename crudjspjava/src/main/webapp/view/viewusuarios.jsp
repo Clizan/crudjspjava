@@ -24,7 +24,7 @@
 		
 		<%
 			List<Usuario> list = UsuarioDao.getAllUsuarios();
-			request.setAttribute("lis", list);			
+			request.setAttribute("list", list);			
 		%>
 	
 		<table class="table table-sm table-striped">
@@ -42,20 +42,24 @@
 			
 			<tbody>
 			
-				<tr>
-					<td>	
-						<button type="button" class="btn btn_view" data-toggle="tooltip" data-placement="top" title="Ver Detalhes"><a href="vieweditform.jsp?id=${usuario.getId()}"><img src="./img/olho.png" id="icones_acao"></a></button>				
-						<button type="button" class="btn btn_edit" data-toggle="tooltip" data-placement="top" title="Editar"><a href="vieweditform.jsp?id=${usuario.getId()}"><img src="./img/editar.png" id="icones_acao"></a></button>
-						<button type="button" class="btn btn_delete" data-toggle="tooltip" data-placement="top" title="Remover"><a href="#"><img src="./img/excluir.png" id="icones_acao"></a></button>
-					</td>
-					<td>1</td>
-					<td>NOME</td>
-					<td>PASSWORD</td>
-					<td>E-MAIL</td>
-					<td>SEXO</td>
-					<td>PAÍS</td>
-				</tr>
+				<c:forEach items="${list}" var="usuario">
+									
+					<tr>
+						<td>	
+							<button type="button" class="btn btn_view" data-toggle="tooltip" data-placement="top" title="Ver Detalhes"><a href="vieweditform.jsp?id=${usuario.getId()}"><img src="./img/olho.png" id="icones_acao"></a></button>				
+							<button type="button" class="btn btn_edit" data-toggle="tooltip" data-placement="top" title="Editar"><a href="vieweditform.jsp?id=${usuario.getId()}"><img src="./img/editar.png" id="icones_acao"></a></button>
+							<button type="button" class="btn btn_delete" data-toggle="tooltip" data-placement="top" title="Remover"><a href="#"><img src="./img/excluir.png" id="icones_acao"></a></button>
+						</td>
+						<td>${usuario.getId()}</td>
+						<td>${usuario.getNome()}</td>
+						<td>${usuario.getPassword()}</td>
+						<td>${usuario.getEmail()}</td>
+						<td>${usuario.getSexo()}</td>
+						<td>${usuario.getPais()}</td>
+					</tr>				
 				
+				</c:forEach>
+							
 			</tbody>
 			
 		</table>

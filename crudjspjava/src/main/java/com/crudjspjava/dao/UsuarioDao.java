@@ -19,10 +19,10 @@ public class UsuarioDao {
 		try {
 			
 			// Carregando o driver mysql
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			// String de conexão com o banco de dados
-			con = DriverManager.getConnection("jbdc://mysql://localhost:3306/crudjspjava", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/crudjspjava", "root", "");
 			
 		} catch (Exception e) {
 			System.out.println(e);
